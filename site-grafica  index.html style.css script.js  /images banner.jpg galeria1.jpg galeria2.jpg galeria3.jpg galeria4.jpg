@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSCariot Comunicação Visual</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+SSCariot Comunicação Visual
+
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#galeria">Portfólio</a>
+<a href="#contato">Contato</a>
+
+</nav>
+
+</header>
+
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<h1>Impressão Digital Profissional</h1>
+
+<p>
+
+Mais de 20 anos criando soluções em comunicação visual com tecnologia de impressão de última geração.
+
+</p>
+
+<a href="#contato" class="btn">
+
+Solicitar Orçamento
+
+</a>
+
+</div>
+
+</section>
+
+
+<section id="sobre">
+
+<h2>Sobre a Empresa</h2>
+
+<p>
+
+A SSCariot Comunicação Visual atua há mais de duas décadas no mercado de comunicação visual, oferecendo soluções completas em impressão digital, fachadas, banners, adesivos e publicidade externa.
+
+Utilizamos equipamentos de última geração que garantem alta resolução, cores vibrantes e máxima durabilidade.
+
+</p>
+
+</section>
+
+
+<section id="servicos">
+
+<h2>Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Banners e Lonas</h3>
+
+<p>
+
+Impressão em grande formato com qualidade fotográfica.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Adesivos</h3>
+
+<p>
+
+Adesivos personalizados para vitrines, paredes e veículos.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Fachadas em ACM</h3>
+
+<p>
+
+Fachadas modernas para empresas.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Outdoors</h3>
+
+<p>
+
+Produção e instalação de outdoors.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>PVC e Acrílico</h3>
+
+<p>
+
+Placas e materiais rígidos de alta qualidade.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Instalação</h3>
+
+<p>
+
+Equipe profissional para instalação de comunicação visual.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="galeria">
+
+<h2>Galeria de Trabalhos</h2>
+
+<div class="galeria">
+
+<img src="images/galeria1.jpg">
+<img src="images/galeria2.jpg">
+<img src="images/galeria3.jpg">
+<img src="images/galeria4.jpg">
+
+</div>
+
+</section>
+
+
+<section id="contato">
+
+<h2>Contato</h2>
+
+<p>
+
+Solicite um orçamento agora mesmo.
+
+</p>
+
+<a href="https://wa.me/5513997306132" class="btn-whatsapp">
+
+Falar no WhatsApp
+
+</a>
+
+<p>
+
+Endereço:<br>
+
+Rua Projetada 30, Nº 79<br>
+
+Jacupiranga - SP
+
+</p>
+
+</section>
+
+
+<footer>
+
+<p>
+
+© 2026 SSCariot Comunicação Visual
+
+</p>
+
+</footer>
+
+
+<a href="https://wa.me/5513997306132" class="whatsapp-float">
+
+💬
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
