@@ -1,16 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SSCariot Comunicação Visual</title>
+<title>Sscariot Comunicação Visual</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff7a18,#ff9b2f);
+color:white;
+}
+
+header{
+background:black;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:32px;
+letter-spacing:2px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+padding:100px 20px;
+text-align:center;
+background:radial-gradient(circle,#ff8c00,#ff5e00);
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.btn{
+background:black;
+padding:15px 30px;
+display:inline-block;
+margin-top:20px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.service{
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+.machine{
+background:black;
+padding:60px 20px;
+text-align:center;
+}
+
+.machine h2{
+color:#ffa500;
+}
+
+footer{
+background:#111;
+padding:30px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+text-decoration:none;
+}
+
+</style>
 
 </head>
 
@@ -18,215 +131,141 @@
 
 <header>
 
-<div class="logo">
-
-SSCariot Comunicação Visual
-
-</div>
+<h1>SSCARIOT</h1>
 
 <nav>
-
-<a href="#home">Home</a>
-<a href="#sobre">Sobre</a>
+<a href="#">Início</a>
 <a href="#servicos">Serviços</a>
-<a href="#galeria">Portfólio</a>
+<a href="#galeria">Galeria</a>
 <a href="#contato">Contato</a>
-
 </nav>
 
 </header>
 
+<section class="hero">
 
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<h1>Impressão Digital Profissional</h1>
+<h2>Comunicação Visual de Alta Qualidade</h2>
 
 <p>
-
-Mais de 20 anos criando soluções em comunicação visual com tecnologia de impressão de última geração.
-
+Impressões profissionais com tecnologia de última geração
 </p>
 
-<a href="#contato" class="btn">
-
+<a class="btn" href="https://wa.me/5513997306132">
 Solicitar Orçamento
-
 </a>
 
-</div>
-
 </section>
 
-
-<section id="sobre">
-
-<h2>Sobre a Empresa</h2>
-
-<p>
-
-A SSCariot Comunicação Visual atua há mais de duas décadas no mercado de comunicação visual, oferecendo soluções completas em impressão digital, fachadas, banners, adesivos e publicidade externa.
-
-Utilizamos equipamentos de última geração que garantem alta resolução, cores vibrantes e máxima durabilidade.
-
-</p>
-
-</section>
-
-
-<section id="servicos">
+<section class="section" id="servicos">
 
 <h2>Nossos Serviços</h2>
 
-<div class="cards">
+<div class="services">
 
-<div class="card">
-
-<h3>Banners e Lonas</h3>
-
-<p>
-
-Impressão em grande formato com qualidade fotográfica.
-
-</p>
-
+<div class="service">
+<h3>Lonas</h3>
+<p>Impressão em lona de alta resistência para fachadas e eventos.</p>
 </div>
 
-
-<div class="card">
-
+<div class="service">
 <h3>Adesivos</h3>
-
-<p>
-
-Adesivos personalizados para vitrines, paredes e veículos.
-
-</p>
-
+<p>Adesivos personalizados para empresas, vitrines e veículos.</p>
 </div>
 
-
-<div class="card">
-
-<h3>Fachadas em ACM</h3>
-
-<p>
-
-Fachadas modernas para empresas.
-
-</p>
-
+<div class="service">
+<h3>ACM</h3>
+<p>Placas e fachadas em ACM com acabamento premium.</p>
 </div>
 
-
-<div class="card">
-
-<h3>Outdoors</h3>
-
-<p>
-
-Produção e instalação de outdoors.
-
-</p>
-
+<div class="service">
+<h3>PVC Expandido</h3>
+<p>Placas rígidas ideais para comunicação visual.</p>
 </div>
 
-
-<div class="card">
-
-<h3>PVC e Acrílico</h3>
-
-<p>
-
-Placas e materiais rígidos de alta qualidade.
-
-</p>
-
+<div class="service">
+<h3>Outdoor</h3>
+<p>Impressões em grande formato com máxima qualidade.</p>
 </div>
 
-
-<div class="card">
-
-<h3>Instalação</h3>
-
-<p>
-
-Equipe profissional para instalação de comunicação visual.
-
-</p>
-
+<div class="service">
+<h3>Letra Caixa</h3>
+<p>Estruturas metálicas em galvanizado e aço.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="machine">
 
-<section id="galeria">
+<h2>Tecnologia de Impressão de Última Geração</h2>
+
+<p>
+
+Na SSCARIOT utilizamos máquinas de impressão digital de alta
+precisão que garantem:
+
+<br><br>
+
+✔ Cores mais vivas  
+<br>
+✔ Alta resolução  
+<br>
+✔ Durabilidade superior  
+<br>
+✔ Acabamento profissional
+
+</p>
+
+</section>
+
+<section class="section" id="galeria">
 
 <h2>Galeria de Trabalhos</h2>
 
-<div class="galeria">
+<div class="gallery">
 
-<img src="images/galeria1.jpg">
-<img src="images/galeria2.jpg">
-<img src="images/galeria3.jpg">
-<img src="images/galeria4.jpg">
+<img src="https://images.unsplash.com/photo-1581091870627-3b5d95e7d2c3">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8a6b0c72c7">
+<img src="https://images.unsplash.com/photo-1581091012184-5c8fcb8c3d2f">
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
 
 </div>
 
 </section>
 
-
-<section id="contato">
+<section class="section" id="contato">
 
 <h2>Contato</h2>
 
 <p>
 
-Solicite um orçamento agora mesmo.
+📍 Jacupiranga - SP  
+<br><br>
+📞 (13) 99730-6132  
+<br><br>
+🕒 Seg a Sex
 
 </p>
 
-<a href="https://wa.me/5513997306132" class="btn-whatsapp">
-
+<a class="btn" href="https://wa.me/5513997306132">
 Falar no WhatsApp
-
 </a>
 
-<p>
-
-Endereço:<br>
-
-Rua Projetada 30, Nº 79<br>
-
-Jacupiranga - SP
-
-</p>
-
 </section>
-
 
 <footer>
 
 <p>
-
-© 2026 SSCariot Comunicação Visual
-
+© 2025 SSCARIOT Comunicação Visual  
+Qualidade e Fidelidade em Impressões
 </p>
 
 </footer>
 
-
-<a href="https://wa.me/5513997306132" class="whatsapp-float">
-
-💬
-
+<a class="whatsapp" href="https://wa.me/5513997306132">
+WhatsApp
 </a>
-
-
-<script src="script.js"></script>
 
 </body>
 </html>
