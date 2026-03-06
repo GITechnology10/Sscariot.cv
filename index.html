@@ -140,7 +140,6 @@ width:100%;
 border-radius:10px;
 transition:0.3s;
 cursor:pointer;
-image-rendering:auto;
 }
 
 .machines img:hover{
@@ -164,7 +163,6 @@ width:100%;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
-image-rendering:auto;
 }
 
 .gallery img:hover{
@@ -269,6 +267,40 @@ padding:30px;
 color:#aaa;
 }
 
+/* BOT IA */
+
+#chatButton{
+position:fixed;
+bottom:110px;
+right:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+border:none;
+cursor:pointer;
+overflow:hidden;
+z-index:9999;
+}
+
+#chatButton img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+#chatFrame{
+position:fixed;
+bottom:190px;
+right:25px;
+width:360px;
+height:520px;
+border:none;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+display:none;
+z-index:9999;
+}
+
 </style>
 
 </head>
@@ -285,121 +317,7 @@ color:#aaa;
 
 </header>
 
-<section class="hero">
-<h2>Impressão Digital Profissional</h2>
-<p>Alta tecnologia em comunicação visual e impressão digital.</p>
-</section>
-
-<section>
-
-<h2>Sobre a Empresa</h2>
-
-<p style="max-width:800px;margin:auto;text-align:center">
-A SSCariot Comunicação Visual possui mais de 20 anos de experiência no mercado, oferecendo soluções completas em comunicação visual e impressão digital. Trabalhamos com máquinas de impressão de última geração, garantindo alta definição, cores vibrantes e acabamento profissional em cada projeto. Nosso compromisso é transformar ideias em resultados visuais de alto impacto, sempre com qualidade, tecnologia e confiança.
-</p>
-
-</section>
-
-<section>
-
-<h2>Nossos Serviços</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Lonas</h3>
-<p>Impressão de lonas em grande formato.</p>
-</div>
-
-<div class="card">
-<h3>Adesivos</h3>
-<p>Adesivos personalizados e recorte eletrônico.</p>
-</div>
-
-<div class="card">
-<h3>ACM</h3>
-<p>Fachadas modernas em ACM.</p>
-</div>
-
-<div class="card">
-<h3>PVC</h3>
-<p>Placas rígidas para comunicação visual.</p>
-</div>
-
-<div class="card">
-<h3>Chapas de Aço</h3>
-<p>Estruturas e painéis metálicos.</p>
-</div>
-
-<div class="card">
-<h3>Outdoor</h3>
-<p>Produção e instalação de outdoors.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Tecnologia de Impressão</h2>
-
-<div class="machines">
-
-<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
-
-<img src="https://i.postimg.cc/SKpRbb8q/IMG-3090.jpg">
-<img src="https://i.postimg.cc/ncBtbj11/IMG-3088.jpg">
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Galeria de Trabalhos</h2>
-
-<div class="gallery">
-
-<div class="gallery-item">
-<img src="https://i.postimg.cc/V6Vb8b41/0185f1a7-367e-45b3-8d37-41a49d3fec89.jpg">
-<p>Projeto Antônio do Amaral</p>
-</div>
-
-<div class="gallery-item">
-<img src="https://i.postimg.cc/KzHg2gQG/91084935-255b-4fc8-92de-6884f6f90134.jpg">
-<p>Projeto Emagrecimento</p>
-<p>Projeto Emagrecentro</p>
-</div>
-
-<div class="gallery-item">
-<img src="https://i.postimg.cc/C1QfgfJM/e9e241b6-3193-4a10-92a2-8b26c7d57c91.jpg">
-<p>Projeto Sicoob</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>Solicite Seu Orçamento</h2>
-
-<p>
-Entre em contato agora e receba um orçamento rápido
-para projetos de comunicação visual e impressão digital.
-</p>
-
-<a class="btn-whatsapp"
-href="https://wa.me/5511999999999"
-target="_blank">
-
-FALAR NO WHATSAPP
-
-</a>
-
-</section>
+<!-- TODO SEU SITE CONTINUA IGUAL -->
 
 <footer>
 SSCariot Comunicação Visual © 2026
@@ -413,45 +331,31 @@ target="_blank">
 
 </a>
 
-<div id="lightbox">
-<img src="">
-</div>
+<!-- BOTÃO DA IA -->
+
+<button id="chatButton">
+<img src="https://i.postimg.cc/59Rx4ZTf/49E6F975-307C-4338-9FAE-AAA8F07B3140.png">
+</button>
+
+<!-- IA -->
+
+<iframe
+id="chatFrame"
+src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/03/06/04/20260306040339-NI8T281T.json">
+</iframe>
 
 <script>
 
-const sections=document.querySelectorAll("section");
+const button=document.getElementById("chatButton");
+const chat=document.getElementById("chatFrame");
 
-window.addEventListener("scroll",()=>{
+button.addEventListener("click",()=>{
 
-sections.forEach(sec=>{
+chat.style.display =
+chat.style.display==="block"
+? "none"
+: "block";
 
-const top=sec.getBoundingClientRect().top;
-
-if(top<window.innerHeight-100){
-sec.classList.add("show");
-}
-
-});
-
-});
-
-const images=document.querySelectorAll(".gallery img, .machines img");
-const lightbox=document.getElementById("lightbox");
-const lightImg=lightbox.querySelector("img");
-
-images.forEach(img=>{
-
-img.addEventListener("click",()=>{
-
-lightbox.style.display="flex";
-lightImg.src=img.src;
-
-});
-
-});
-
-lightbox.addEventListener("click",()=>{
-lightbox.style.display="none";
 });
 
 </script>
