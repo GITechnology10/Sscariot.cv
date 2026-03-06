@@ -10,8 +10,6 @@
 
 <style>
 
-/* RESET */
-
 *{
 margin:0;
 padding:0;
@@ -19,19 +17,18 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
-/* FUNDO TECNOLÓGICO */
-
 body{
-background:#0f0f0f;
+background:#0a0a0a;
 color:white;
 overflow-x:hidden;
 }
+
+/* FUNDO TECNOLÓGICO */
 
 .tech-bg{
 position:fixed;
 width:100%;
 height:100%;
-background:#0f0f0f;
 z-index:-1;
 }
 
@@ -41,8 +38,8 @@ position:absolute;
 width:200%;
 height:200%;
 background-image:
-linear-gradient(rgba(255,120,0,0.08) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,120,0,0.08) 1px, transparent 1px);
+linear-gradient(rgba(255,140,0,0.08) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,140,0,0.08) 1px,transparent 1px);
 background-size:60px 60px;
 animation:gridMove 20s linear infinite;
 }
@@ -55,7 +52,7 @@ to{transform:translate(-60px,-60px);}
 /* HEADER */
 
 header{
-padding:25px;
+padding:30px;
 text-align:center;
 background:linear-gradient(90deg,#ff6a00,#ff8c00);
 }
@@ -79,7 +76,7 @@ text-align:center;
 .hero h2{
 font-size:48px;
 background:rgba(0,0,0,0.6);
-padding:15px 25px;
+padding:15px 30px;
 border-radius:10px;
 }
 
@@ -91,10 +88,16 @@ padding:10px 20px;
 border-radius:10px;
 }
 
-/* SEÇÕES */
-
 section{
 padding:100px 10%;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
@@ -125,7 +128,7 @@ transform:translateY(-10px);
 background:#ff6a00;
 }
 
-/* TECNOLOGIA */
+/* MÁQUINAS */
 
 .machines{
 display:grid;
@@ -136,6 +139,12 @@ gap:25px;
 .machines img{
 width:100%;
 border-radius:10px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.machines img:hover{
+transform:scale(1.05);
 }
 
 /* GALERIA */
@@ -149,6 +158,7 @@ gap:25px;
 .gallery img{
 width:100%;
 border-radius:10px;
+cursor:pointer;
 transition:0.3s;
 }
 
@@ -156,23 +166,85 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+/* LIGHTBOX */
+
+#lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+}
+
 /* CTA */
 
 .cta{
-background:linear-gradient(90deg,#ff6a00,#ff8c00);
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789")
+center/cover;
+padding:120px 20px;
 text-align:center;
-padding:80px;
 }
 
-.btn{
-margin-top:20px;
-display:inline-block;
-background:black;
-padding:15px 35px;
+.cta h2{
+font-size:42px;
+margin-bottom:20px;
+color:#ff8c00;
+}
+
+.cta p{
+font-size:20px;
+margin-bottom:35px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white;
+padding:18px 45px;
+font-size:20px;
+font-weight:bold;
 border-radius:8px;
 text-decoration:none;
+display:inline-block;
+transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+transform:scale(1.08);
+}
+
+/* BOTÃO WHATSAPP FLUTUANTE */
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
 color:white;
-font-weight:bold;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+z-index:999;
 }
 
 /* FOOTER */
@@ -193,17 +265,12 @@ color:#aaa;
 <div class="tech-bg"></div>
 
 <header>
-
 <h1>SSCariot Comunicação Visual</h1>
-
 </header>
 
 <section class="hero">
-
 <h2>Impressão Digital Profissional</h2>
-
-<p>Comunicação visual de alto impacto para empresas.</p>
-
+<p>Alta tecnologia em comunicação visual e impressão digital.</p>
 </section>
 
 <section>
@@ -212,7 +279,9 @@ color:#aaa;
 
 <p style="max-width:800px;margin:auto;text-align:center">
 
-A SSCariot Comunicação Visual trabalha com impressão digital profissional utilizando máquinas de última geração que garantem máxima qualidade nas cores, precisão e durabilidade.
+A SSCariot Comunicação Visual trabalha com equipamentos de impressão digital de última geração,
+garantindo cores vibrantes, alta definição e máxima qualidade em lonas, adesivos,
+fachadas, placas e projetos completos de comunicação visual.
 
 </p>
 
@@ -226,7 +295,7 @@ A SSCariot Comunicação Visual trabalha com impressão digital profissional uti
 
 <div class="card">
 <h3>Lonas</h3>
-<p>Impressão em lona de alta resolução.</p>
+<p>Impressão de lonas em grande formato.</p>
 </div>
 
 <div class="card">
@@ -236,17 +305,17 @@ A SSCariot Comunicação Visual trabalha com impressão digital profissional uti
 
 <div class="card">
 <h3>ACM</h3>
-<p>Painéis profissionais para fachadas.</p>
+<p>Fachadas modernas em ACM.</p>
 </div>
 
 <div class="card">
 <h3>PVC</h3>
-<p>Placas rígidas com acabamento premium.</p>
+<p>Placas rígidas para comunicação visual.</p>
 </div>
 
 <div class="card">
 <h3>Chapas de Aço</h3>
-<p>Estruturas metálicas resistentes.</p>
+<p>Estruturas e painéis metálicos.</p>
 </div>
 
 <div class="card">
@@ -264,11 +333,7 @@ A SSCariot Comunicação Visual trabalha com impressão digital profissional uti
 
 <div class="machines">
 
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
-
 <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-
-<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
 
 <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
 
@@ -283,17 +348,11 @@ A SSCariot Comunicação Visual trabalha com impressão digital profissional uti
 <div class="gallery">
 
 <img src="https://i.postimg.cc/Fd0Kbz2n/0185f1a7-367e-45b3-8d37-41a49d3fec89.jpg">
-
 <img src="https://i.postimg.cc/KktY7j6F/2904cd52-7df1-4113-9094-3cfb200a7051.jpg">
-
 <img src="https://i.postimg.cc/bD1v0rKW/91084935-255b-4fc8-92de-6884f6f90134.jpg">
-
 <img src="https://i.postimg.cc/342wjNsM/bcfc94ea-ce71-4cff-8d34-5f9755f57dad.jpg">
-
 <img src="https://i.postimg.cc/1nDz0XkQ/de5cf9bf-b695-493f-9080-598fe676b739.jpg">
-
 <img src="https://i.postimg.cc/0M7NGjLh/e9e241b6-3193-4a10-92a2-8b26c7d57c91.jpg">
-
 <img src="https://i.postimg.cc/N9R08FWV/f2ba6e05-37cc-41f2-adf8-925386cbcfee.jpg">
 
 </div>
@@ -302,19 +361,84 @@ A SSCariot Comunicação Visual trabalha com impressão digital profissional uti
 
 <section class="cta">
 
-<h2>SOLICITAR ORÇAMENTO</h2>
+<h2>Solicite Seu Orçamento</h2>
 
-<a class="btn" href="https://wa.me/5511999999999">
-Falar no WhatsApp
+<p>
+Entre em contato agora e receba um orçamento rápido
+para projetos de comunicação visual e impressão digital.
+</p>
+
+<a class="btn-whatsapp"
+href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+target="_blank">
+
+FALAR NO WHATSAPP
+
 </a>
 
 </section>
 
 <footer>
 
-<p>SSCariot Comunicação Visual © 2026</p>
+SSCariot Comunicação Visual © 2026
 
 </footer>
 
+<a class="whatsapp-float"
+href="https://wa.me/5511999999999"
+target="_blank">
+
+💬
+
+</a>
+
+<div id="lightbox">
+<img src="">
+</div>
+
+<script>
+
+/* ANIMAÇÃO SCROLL */
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+const top=sec.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+sec.classList.add("show");
+}
+
+});
+
+});
+
+/* LIGHTBOX */
+
+const images=document.querySelectorAll(".gallery img, .machines img");
+const lightbox=document.getElementById("lightbox");
+const lightImg=lightbox.querySelector("img");
+
+images.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.style.display="flex";
+lightImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+lightbox.style.display="none";
+});
+
+</script>
+
 </body>
+
 </html>
