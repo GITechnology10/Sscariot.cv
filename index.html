@@ -23,30 +23,31 @@ color:white;
 overflow-x:hidden;
 }
 
-/* FUNDO TECNOLÓGICO */
+/* NOVO FUNDO TECNOLÓGICO COM MÁQUINA */
 
 .tech-bg{
 position:fixed;
 width:100%;
 height:100%;
 z-index:-1;
+background:
+linear-gradient(rgba(0,0,0,0.80),rgba(0,0,0,0.85)),
+url("https://i.postimg.cc/ZRVmC1Qt/IMG-3089.jpg");
+background-size:cover;
+background-position:center;
+animation:bgMove 30s ease-in-out infinite alternate;
 }
 
-.tech-bg::before{
-content:"";
-position:absolute;
-width:200%;
-height:200%;
-background-image:
-linear-gradient(rgba(255,140,0,0.08) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,140,0,0.08) 1px,transparent 1px);
-background-size:60px 60px;
-animation:gridMove 20s linear infinite;
+@keyframes bgMove{
+
+0%{
+transform:scale(1);
 }
 
-@keyframes gridMove{
-from{transform:translate(0,0);}
-to{transform:translate(-60px,-60px);}
+100%{
+transform:scale(1.1);
+}
+
 }
 
 /* HEADER */
@@ -334,12 +335,7 @@ fachadas, placas e projetos completos de comunicação visual.
 <div class="machines">
 
 <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-
 <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
-
-<img src="https://images.unsplash.com/photo-1611095566882-3a4c9f5bff1e">
-
-<img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df3c">
 
 </div>
 
@@ -373,7 +369,7 @@ para projetos de comunicação visual e impressão digital.
 </p>
 
 <a class="btn-whatsapp"
-href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+href="https://wa.me/5511999999999"
 target="_blank">
 
 FALAR NO WHATSAPP
